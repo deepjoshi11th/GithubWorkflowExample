@@ -9,6 +9,7 @@ public class Problem {
      */
     public Problem() {
     }
+
     /**
      * problem is defined here.
      * @param title
@@ -18,6 +19,7 @@ public class Problem {
         this.title = title;
         this.descriptionValue = descriptionValue;
     }
+
     /**
      * this is  gettitle method.
      * @return it is returning the value
@@ -25,6 +27,7 @@ public class Problem {
     public String getTitle() {
         return title;
     }
+
     /**
      * setTitle declared here.
      * @param title
@@ -32,6 +35,7 @@ public class Problem {
     public void setTitle(String title) {
         this.title = title;
     }
+
     /**
      * getDescriptionValue here.
      * @return returning the value.
@@ -39,6 +43,7 @@ public class Problem {
     public String getDescriptionValue() {
         return descriptionValue;
     }
+
     /**
      * it is comment.
      * @param descriptionValue
@@ -46,4 +51,5 @@ public class Problem {
     public void setDescriptionValue(String descriptionValue) {
         this.descriptionValue = descriptionValue;
     }
+
 }
