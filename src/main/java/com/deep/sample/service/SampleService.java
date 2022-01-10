@@ -14,6 +14,12 @@ public class SampleService {
         problemList.add(new Problem("Def", "Ghi"));
     }
 
+    /**
+     * it is getproblembyid.
+     * @param index
+     * @return it is returning value.
+     */
+
     public Problem getProblemById(Integer index) {
         if (index < problemList.size()) {
             return problemList.get(index);

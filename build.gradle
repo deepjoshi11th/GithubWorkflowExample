@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.6.2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'checkstyle'
 }
 
 group = 'com.deep'
@@ -10,11 +11,17 @@ sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
+	maven { url "https://plugins.gradle.org/m2/" }
+	maven { url "https://repo.spring.io/plugins-release/" }
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+checkstyle {
+	configFile = new File(rootDir, 'configuration/checkstyle/checkstyle.xml')
 }
 
 test {
