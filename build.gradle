@@ -3,11 +3,22 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'checkstyle'
+	id 'pmd'
 }
 
 group = 'com.deep'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
+
+ext {
+	pmdVersion = '6.41.0'
+}
+
+pmd {
+	toolVersion = pmdVersion
+	ruleSetConfig = rootProject.resources.text.fromFile('pmd/ruleset.xml')
+	ignoreFailures = true
+}
 
 repositories {
 	mavenCentral()
@@ -17,7 +28,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 checkstyle {
