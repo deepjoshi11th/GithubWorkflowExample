@@ -4,14 +4,15 @@ import com.deep.sample.model.Problem;
 
 import javax.annotation.ManagedBean;
 import java.util.ArrayList;
+import java.util.List;
 
 @ManagedBean
 public class SampleService {
-    private static ArrayList<Problem> problemList;
+    private static final List<Problem> PROBLEM_LIST;
     static {
-        problemList = new ArrayList<>();
-        problemList.add(new Problem("Abc", "Cde"));
-        problemList.add(new Problem("Def", "Ghi"));
+        PROBLEM_LIST = new ArrayList<>();
+        PROBLEM_LIST.add(new Problem("Abc", "Cde"));
+        PROBLEM_LIST.add(new Problem("Efg", "Ghi"));
     }
 
     /**
@@ -21,8 +22,8 @@ public class SampleService {
      */
 
     public Problem getProblemById(Integer index) {
-        if (index < problemList.size()) {
-            return problemList.get(index);
+        if (index < PROBLEM_LIST.size()) {
+            return  PROBLEM_LIST.get(index);
         }
         return null;
     }

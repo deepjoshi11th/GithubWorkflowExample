@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SampleController {
 
     @Autowired
-    private SampleService sampleService;
+    private transient SampleService sampleService;
 
     /**
      * this is method that i do not know.
